@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+:root {
+    --background-filter: blur(100px);
+    --text-color: #111827;
+    --text-color-secondary: #4b5563;
+    --text-color-hover: rgb(78, 80, 86);
+    --background-color: rgba(255, 255, 255, 1);
+    --border-color: white;
+    --code-background: linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+        linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+    --link-color: #3262db;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e5e7eb;
+        --text-color-secondary: #d1d5db;
+        --text-color-hover: #f9fafb;
+        --background-color: rgba(30, 30, 30, 0.8);
+        --border-color: #374151;
+        --code-background: linear-gradient(66.77deg, #4b1d2f 0%, #4a2d47 100%) padding-box,
+            linear-gradient(155deg, #d83333 0%, #f041ff 18%, #4a2d47 45%) border-box;
+        --link-color: #7da3ea;
+    }
+}
+
+/* 通用字体样式 */
+body {
+    font-family: 'Lora', 'Times New Roman', 'Songti SC', 'SimSun', serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* 通用容器样式 */
+.container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 按钮通用样式 */
+.button {
+    display: inline-block;
+    padding: 10px 12px;
+    color: white !important;
+    text-decoration: none;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    color: rgb(230, 230, 230);
+    box-shadow: none;
+}
+
+/* 返回按钮样式 */
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 12px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    border-radius: 10px;
+    transition: box-shadow 0.2s;
+}
+
+.back-button:hover {
+    box-shadow: none;
+}
+
+a {
+    color: var(--link-color);
+}
