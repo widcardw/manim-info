@@ -10,6 +10,7 @@
     --code-background: linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
         linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
     --link-color: #3262db;
+    --accent-color: #1a85cd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,20 +18,23 @@
         --text-color: #e5e7eb;
         --text-color-secondary: #d1d5db;
         --text-color-hover: #f9fafb;
-        --background-color: rgba(30, 30, 30, 0.8);
+        --background-color: rgba(30, 30, 30);
         --border-color: #374151;
         --code-background: linear-gradient(66.77deg, #4b1d2f 0%, #4a2d47 100%) padding-box,
             linear-gradient(155deg, #d83333 0%, #f041ff 18%, #4a2d47 45%) border-box;
         --link-color: #7da3ea;
+        --accent-color: #259dd4;
     }
 }
 
 /* 通用字体样式 */
+html,
 body {
-    font-family: 'Lora', 'Times New Roman', 'Songti SC', 'SimSun', serif;
+    font-family: 'Lora', 'Times New Roman', 'Songti SC', sans-serif, 'SimSun', serif;
     font-size: 1.2rem;
     line-height: 1.5;
-    color: #333;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 /* 通用容器样式 */
@@ -46,17 +50,12 @@ body {
     padding: 10px 12px;
     color: white !important;
     text-decoration: none;
-    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    background: var(--accent-color);
     box-shadow:
         inset 0 0 0 1px rgba(255, 255, 255, 0.12),
         inset 0 -2px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
     transition: all 0.2s ease;
-}
-
-.button:hover {
-    color: rgb(230, 230, 230);
-    box-shadow: none;
 }
 
 /* 返回按钮样式 */
@@ -66,7 +65,7 @@ body {
     padding: 10px 12px;
     color: white;
     text-decoration: none;
-    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    background: var(--accent-color);
     border-radius: 10px;
     transition: box-shadow 0.2s;
 }
